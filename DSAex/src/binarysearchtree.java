@@ -1,9 +1,13 @@
 
+import java.lang.classfile.components.ClassPrinter;
+
+
 public class binarysearchtree{
     class  TNode{
         int value;
         TNode left;
         TNode right;
+
 
         public TNode(int value) {
             this.value =value;
@@ -13,11 +17,14 @@ public class binarysearchtree{
         }   
     }
     private TNode root = null;
+    public int ncount =0;
+    public int pcount =0;
 
     public void insert(int value){
         TNode n = new TNode(value);
         if (root == null){
             root = n;
+            ncount+=1;
             return;
         }
 
@@ -28,6 +35,7 @@ public class binarysearchtree{
                 if (value <= temp.value){
                     if (temp.left == null){
                         temp.left = n;
+                        ncount+=1;
                         break;
                     }
                     else{
@@ -37,6 +45,7 @@ public class binarysearchtree{
                 else {
                     if (temp.right == null){
                         temp.right = n;
+                        ncount+=1;
                         break;
                     }
                     else{
@@ -48,6 +57,7 @@ public class binarysearchtree{
 
     }
     public void show(TNode n){
+        
         if (n == null){
             return;
             
@@ -55,8 +65,24 @@ public class binarysearchtree{
         }
         show(n.left);
         System.out.println(n.value);
+        pcount++;
         show(n.right);
+
         //System.out.println(n.right);
+    }
+    public void count(){
+        System.out.println(ncount);
+        System.out.println(pcount);
+
+    }
+    public int height(TNode n){
+        if (n == null){
+            return 0;   
+        }
+        int lh =height(n.left);
+        int rh =height(n.right);
+
+
     }
 
    
@@ -74,6 +100,9 @@ public class binarysearchtree{
         b.insert(29);
         b.insert(28);
         b.show(b.root);
+        b.count();
+
+        
 
     }
 }
