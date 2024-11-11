@@ -1,9 +1,7 @@
 // Write a program to check for balanced parenthesis in a given expression.
-
 import java.util.Stack;
 
 public class ex9 {
-
     // Method to check if parentheses are balanced
     public static boolean areParenthesesBalanced(String expression) {
         Stack<Character> stack = new Stack<>();
@@ -11,12 +9,10 @@ public class ex9 {
         // Traverse through the expression
         for (int i = 0; i < expression.length(); i++) {
             char ch = expression.charAt(i);
-
             // Push opening brackets onto the stack
             if (ch == '(' || ch == '{' || ch == '[') {
                 stack.push(ch);
             }
-
             // For closing brackets, check if they match the top of the stack
             else if (ch == ')' || ch == '}' || ch == ']') {
                 if (stack.isEmpty()) {

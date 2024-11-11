@@ -1,20 +1,14 @@
 
-import java.util.LinkedList;
-import java.util.Queue;
 
 public class Queuell {
-/* 
     static class Node{
         int data;
         Node next;
-
         public Node(int data) {
             this.data = data;
             next = null;
 
         }
-        
-
     }
     static class Queue {
         static Node head = null;
@@ -64,11 +58,11 @@ public class Queuell {
             }
             return head.data;
         }
-    } */
+    } 
 
     public static void main(String[] args) {
-        //Queue q = new Queue();
-        Queue<Integer> q = new LinkedList<>();
+        Queue q = new Queue();
+        
         q.add(1);
         q.add(2);
         q.add(3);

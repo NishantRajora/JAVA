@@ -10,9 +10,7 @@ public class singlylladd {
     }
 
     private Node head = null;
-    
-
-
+ 
     public void insertAtPosition(int data, int position) {
         if (position <= 0) {
             System.out.println("Invalid position");
@@ -65,12 +63,9 @@ public class singlylladd {
         } else {
             newNode.next = temp.next;
             temp.next = newNode;
-        }
-    
-        
-        
+        }   
     }
-   
+
     public void displayList() {
         if (head == null) {
             System.out.println("List is empty");
@@ -83,11 +78,6 @@ public class singlylladd {
             System.out.println();
         }
     }
-
-
-    
-
-
 
     public static void main(String[] args) {
         singlylladd s = new singlylladd();
