@@ -6,7 +6,7 @@ public class FileCreator {
     public static void main(String[] args) {
         // Set the directory path for file creation
         String targetDirectory = "D:\\Java\\practice problem";
-        int numberOfFiles = 10; // Specify how many files to create
+        int numberOfFiles = 1; // Specify how many files to create
 
         // Create the directory if it doesn't exist
         Path dirPath = Paths.get(targetDirectory);
